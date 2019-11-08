@@ -1,0 +1,157 @@
+<!-- <div class="bar w3-bar w3-border w3-card-4 w3-red w3-padding-16">
+  <a  class="w3-bar-item">Appointment-Details</a>
+  <a href="#" class="w3-bar-item"><button class="w3-btn w3-blue-grey"><a href="#" [routerLink]="['/dashboard']">Back</a></button></a>
+</div> -->
+
+
+<div class="w3-bar w3-animate-right  w3-card-4 w3-black w3-padding-16">
+  <img src="../../../assets/images/d.png" width="150" style="margin-left: 50px" />
+</div>
+
+<div class="w3-sidebar w3-animate-left w3-card-4  w3-bar-block" style="width:25%;background-color:#80335B ">
+  <img  src="../../../assets/images/540060_1713898518909370_7901102692001249383_n.jpg" class=" w3-circle w3-card-4" width="100" style="margin-top: 10px; margin-left: 100px;" />
+  <h4  style="margin-top: 10px; margin-left: 70px; color:white">OSCAR BARRETT</h4>
+  <h6 style="margin-top: 10px; margin-left: 90px; font-size: 12px; color:white"><strong>Balance: $1,359.00</strong></h6>
+  <!-- <img src="../../../assets/images/logo1.png" style="width: 200px; margin-top: 10px; margin-left: 50px;" /> -->
+  <a href="#" class="w3-bar-item  w3-button" [routerLink]="['/dashboard']" style="color:white"><i class=" fa fa-arrow-right"></i> Dashboard</a>
+  <a href="#" class="w3-bar-item  w3-button" [routerLink]="['/docter-details']" style="color:white"><i class=" fa fa-arrow-right"></i> Docter Details</a>
+  <a href="#" class="w3-bar-item w3-button"[routerLink]="['/services']" style="color:white"><i class=" fa fa-arrow-right"></i> Services</a>
+  <a href="#" class="w3-bar-item w3-button" [routerLink]="['/doctor-category']" style="color:white"><i class=" fa fa-arrow-right"></i> Doctor Category</a>
+  <a href="#" class="w3-bar-item w3-button" [routerLink]="['/details']" style="color:white"><i class=" fa fa-arrow-right"></i> Details</a>
+  <a href="#" class="w3-bar-item w3-button" [routerLink]="['/appointment-details']" style="color:white"><i class=" fa fa-arrow-right"></i> Appointment Details</a>
+  <a href="#" class="w3-bar-item  w3-button"  [routerLink]="['/location']" style="color:white"><i class=" fa fa-arrow-right"></i> Location</a>
+  <!-- <a href="#" class="w3-bar-item  w3-button" [routerLink]="['/about-us']"><i class="w3-text-blue-grey fa fa-arrow-right"></i> About Us</a>
+  <a href="#" class="w3-bar-item  w3-button"  [routerLink]="['/contact-us']"><i class="w3-text-blue-grey fa fa-arrow-right"></i> Contact Us</a> -->
+</div>
+
+<div class=" w3-animate-right container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <i class="w3-large fa fa-search" style="color:#80335B"></i><em><input name="searchInput" #searchInput="ngModel" [(ngModel)]="searchText"  class="w3-input" type="search" placeholder="search"></em><br />
+    </div>
+  </div>
+</div>
+
+<div style="margin-left:350px;">
+  <div class="w3-animate-right container">
+    <div class="row justify-content-start">
+      <div class="col-md-5">
+        <h1 style="color:#80335B"><i class="fa fa-book"></i>Book Appointment Details</h1>
+        <form style="width:300px"  [formGroup]="doctorservice.doctorform" (ngSubmit)="onSubmit()" class="w3-container">
+  
+          <em><input formControlName="$key" class="w3-input" type="hidden"></em>
+  
+      
+         <em><input  placeholder="Name" formControlName="name"  class="w3-input" type="text" ></em><br />
+        
+          
+         <em><input placeholder="Phone" formControlName="phone"  class="w3-input " type="number" ></em><br />
+  
+       
+          <em><select  placeholder="Select Services" formControlName="service" class="w3-select" name="option" >
+            <option value="cardiology">cardiology</option>
+            <option value="neurology">neurology</option>
+            <option value="urology">urology</option>
+            <option value="medicine">medicine</option>
+            <option value="orthopedics">orthopedics</option>
+            <option value="dental">dental</option>
+            <option value="cancer">cancer</option>
+            <option value="emergency">emergency</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+          </select></em><br /><br />
+  
+        
+          <em><select placeholder="Select Doctor" formControlName="doctor" class="w3-select" name="option" >
+            <option value="Dr. Suzanne Holroyd">Dr. Suzanne Holroyd</option>
+            <option value="Dr. James Larn">Dr. James Larn</option>
+            <option value="Dr. Raymond">Dr. Raymond</option>
+            <option value="Dr. Paul Levine">Dr. Paul Levine</option>
+          </select></em><br /><br />
+  
+    
+          <em><input placeholder="Date" formControlName="date" class="w3-input" type="date" ></em><br />
+  
+          
+            <em> <textarea placeholder="Message" formControlName="message" class="w3-input" ></textarea></em><br />
+  
+          <button style="background-color:#80335B; color:white" [disabled]="doctorservice.doctorform.invalid"  class="w3-btn w3-block">Submit</button>
+        </form> 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ng-container *ngFor="let doctor of DoctorList; let i = index">
+      <ul *ngIf="filtercondition(doctor)" class="w3-ul" style="width:50%">
+        <li><strong>S.no: </strong> {{i + 1}}</li>
+        <li><strong>#id: </strong> {{doctor.id}}</li>
+        <li><strong>Name: </strong> {{doctor.name}}</li>
+        <li><strong>Phone: </strong> {{doctor.phone}}</li>
+        <li><strong>Service: </strong> {{doctor.service}}</li>
+        <li><strong>Doctor: </strong> {{doctor.doctor}}</li>
+        <li><strong>Date: </strong> {{doctor.date}}</li>
+        <li><strong>Message: </strong> {{doctor.message}}</li>
+        <li> <button class="w3-button w3-teal" (click)="doctorservice.popularForm(doctor)">Edit</button>
+        <button class="btn w3-button w3-red" (click)="onRemove(doctor.id)">Delete</button>
+        <button class="btn w3-button w3-blue-grey" ><a href="#" routerLink="/appointment-view/{{doctor.id}}">Details</a></button></li>
+      </ul>
+    </ng-container>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<div style="margin-top:-520px; margin-left:220px;" class=" w3-animate-right container">
+  <div class="row justify-content-center">
+    <div class="col-md-1">
+      <table  class="w3-table-all w3-card-4">
+        <thead>
+          <tr  style="background-color:#80335B; color: white">
+            <th>S.no</th>
+            <!-- <th>#id</th> -->
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Services</th>
+            <!-- <th>Doctors</th>
+            <th>Date</th>
+            <th>Message</th> -->
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <ng-container *ngFor="let doctor of getservice.doctorList; let i = index">
+              <tr *ngIf="filtercondition(doctor)">
+                  <td>{{i + 1}}</td>
+                  <td>{{doctor.name}}</td>
+                  <td>{{doctor.phone}}</td>
+                  <td>{{doctor.service}}</td>
+                  <!-- <td>{{doctor.doctor}}</td>
+                  <td>{{doctor.date}}</td>
+                  <td>{{doctor.message}}</td> -->
+                  <td>
+                    <button style="background-color:#80335B; color: white" class=" w3-button" (click)="doctorservice.popularForm(doctor)">Edit</button>
+                  </td>
+                  <td>
+                      <button style="background-color:#A5467B; color: white" class=" w3-button" (click)="onRemove(doctor.$key)">Delete</button>
+                    </td>
+                    <td>
+                        <button class="w3-blue-grey w3-button"><a href="#" routerLink="/appointment-view/{{doctor.$key}}">Details</a></button>
+                      </td>
+                </tr>
+          </ng-container>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

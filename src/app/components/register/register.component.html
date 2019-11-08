@@ -1,0 +1,55 @@
+<div  class=" w3-bar w3-card-4 w3-black" >
+  <a href="#" class=" w3-animate-left w3-bar-item w3-button w3-padding-32"><img  style="width:300px;" src="../../../assets/images/d.png" /></a>
+  <div class=" w3-animate-right" style="margin-left: 600px; margin-top:45px;">
+  <a  href="#" class="w3-bar-item" style="color: #808080" [routerLink]="['/index']"> <i class="fa fa-home"></i> Home</a>
+  <a href="#" class="w3-bar-item" [routerLink]="['/about']">About Us</a>
+  <a  href="#" class="w3-bar-item" [routerLink]="['/service']">Services</a>
+  <a href="#" class="w3-bar-item" [routerLink]="['/contact']"><i class="fa fa-phone" ></i> Contact Us</a>
+  <a  href="#" class="w3-bar-item" style="color:#80335B"  [routerLink]="['/register']"><i class="fa fa-user"  style="color:#80335B"></i> Signup</a>
+  <a href="#" class="w3-bar-item" style="color:#A5467B"  [routerLink]="['/login']"><i class="fa fa-lock" style="color:#A5467B"></i> Login</a>
+  <a href="#" class="w3-bar-item" style="color:#A5467B">Appointment</a>
+</div>
+</div>
+
+<div class="container w3-animate-zoom">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="w3-card-4 w3-padding-16">
+        <h1 class="w3-text-grey" style="margin-left: 30px;" ><i class="fa fa-user" style="color:#A5467B"></i> SIGN UP</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="w3-container">
+
+          <em><input placeholder="Username" style="background-color:transparent;" formControlName="username" class="w3-input" type="text"></em><br />
+
+  
+          <em><input placeholder="email" style="background-color:transparent"  formControlName="email" class="w3-input" type="email"></em><br />
+      
+
+            <em> <input placeholder="password" style="background-color:transparent"  formControlName="password" class="w3-input" type="password"></em><br />
+            <p>
+              <em><input formControlName="userType" class="w3-radio" type="radio" value="user"></em>
+            <em><label> User </label></em></p>
+
+            <!-- <strong>Back To?  </strong><a href="#" [routerLink]="['/login']">signin</a> <br /><br /> -->
+        <button  class="w3-btn" style="background-color: #80335B;color: white">Register</button>
+      </form> 
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- <div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+    
+            
+           
+      </div>
+    </div>
+  </div> -->
+
+  <div  style="margin-top:30px; background-color: #80335B"   class=" w3-bar w3-card-4  w3-padding-32">
+  
+    <a style="margin-left:400px; color: white" href="#" class="w3-bar-item">Created By Muhammed Asad Ali Akbar @CopyRight All Right Reserved</a>
+  
+  </div>

@@ -1,0 +1,46 @@
+<!-- <div class="bar w3-bar w3-border w3-card-4 w3-red w3-padding-16">
+  <a  class="w3-bar-item">Appointment-View</a>
+  <a href="#" class="w3-bar-item"><button class="w3-btn w3-blue-grey"><a href="#" [routerLink]="['/appointment-details']">Back</a></button></a>
+</div> -->
+
+<!-- <div class="bar w3-bar w3-border w3-card-4 w3-red w3-padding-16">
+  <a  class="w3-bar-item">Services</a>
+  <a href="#" class="w3-bar-item "><button class="w3-btn w3-blue-grey"><a href="#" [routerLink]="['/dashboard']">Back</a></button></a>
+</div><br /> -->
+
+
+<div class="w3-bar w3-animate-right   w3-card-4 w3-black w3-padding-16">
+  <img src="../../../assets/images/d.png" width="150" style="margin-left: 50px" />
+</div>
+
+<div class="w3-sidebar w3-animate-left w3-card-4   w3-bar-block" style="width:25%;background-color:#80335B">
+  <img  src="../../../assets/images/540060_1713898518909370_7901102692001249383_n.jpg" class=" w3-circle w3-card-4" width="100" style="margin-top: 10px; margin-left: 100px;" />
+  <h4  style="margin-top: 10px; margin-left: 70px; color:white">OSCAR BARRETT</h4>
+  <h6 style="margin-top: 10px; margin-left: 90px; font-size: 12px; color:white"><strong>Balance: $1,359.00</strong></h6>
+  <!-- <img src="../../../assets/images/logo1.png" style="width: 200px; margin-top: 10px; margin-left: 50px;" /> -->
+  <a href="#" class="w3-bar-item  w3-button" [routerLink]="['/dashboard']" style="color:white"><i class=" fa fa-arrow-right"></i> Dashboard</a>
+  <a href="#" class="w3-bar-item  w3-button" [routerLink]="['/docter-details']" style="color:white"><i class=" fa fa-arrow-right"></i> Docter Details</a>
+  <a href="#" class="w3-bar-item w3-button"[routerLink]="['/services']" style="color:white"><i class=" fa fa-arrow-right"></i> Services</a>
+  <a href="#" class="w3-bar-item w3-button" [routerLink]="['/doctor-category']" style="color:white"><i class=" fa fa-arrow-right"></i> Doctor Category</a>
+  <a href="#" class="w3-bar-item w3-button" [routerLink]="['/details']" style="color:white"><i class=" fa fa-arrow-right"></i> Details</a>
+  <a href="#" class="w3-bar-item w3-button" [routerLink]="['/appointment-details']" style="color:white"><i class=" fa fa-arrow-right"></i> Appointment Details</a>
+  <a href="#" class="w3-bar-item  w3-button"  [routerLink]="['/location']" style="color:white"><i class=" fa fa-arrow-right"></i> Location</a>
+  <!-- <a href="#" class="w3-bar-item  w3-button" [routerLink]="['/about-us']"><i class="w3-text-blue-grey fa fa-arrow-right"></i> About Us</a>
+  <a href="#" class="w3-bar-item  w3-button"  [routerLink]="['/contact-us']"><i class="w3-text-blue-grey fa fa-arrow-right"></i> Contact Us</a> -->
+</div>
+
+<div style="margin-top:50px;" class="w3-animate-right container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <ul  class="w3-ul" style="color:#80335B">
+        <!-- <li><strong>Name: </strong> {{ (doctor | async)?.name }}</li>
+        <li><strong>Phone: </strong> {{ (doctor | async)?.phone}}</li>
+        <li><strong>Service: </strong> {{ (doctor | async)?.service }}</li> -->
+        <em><li><strong>Doctor: </strong> {{ (doctor | async)?.doctor }}</li></em>
+        <em><li><strong>Date: </strong> {{ (doctor | async)?.date }}</li></em>
+        <em><li><strong>Message: </strong> {{ (doctor | async)?.message }}</li></em>
+      
+      </ul>
+    </div>
+  </div>
+</div>
